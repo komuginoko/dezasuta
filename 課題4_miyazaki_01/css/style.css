@@ -44,40 +44,60 @@ header{
 }
 
 
-section{
+.lead{
     margin-top: 99px;
     text-align: center;
     font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
 }
 
-p{
-    margin-bottom: 53px;
+.lead p:nth-child(1){
+    font-size: 30px;
+    margin-bottom: 65px;
 }
 
-.header_sub{
+.lead p:nth-child(2){
     font-size: 82px;
     margin-bottom: 47px;
-    line-height: 1;
+    line-height: 96px;
     word-break: break-all;
+}
+
+.lead p:nth-child(3){
+    font-size: 16px;
+    margin-bottom: 99px;
+    line-height: 38px;
 }
 
 .flex{
     display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-bottom: 54px;
+
 }
 
+
 .flex .image{
-    width: 500px;
+    width: 50%;
     height: 560px;
     margin: 0;
     padding: 0;
     overflow: hidden;
     position: relative;
-    margin-left: 440px;
+    border-radius: 0 0 50px 0;
+    
 }
 
-.flex .right{
-    margin: 0 0 0 20px;
+.flex .title{
+    width: 272px;
+    height: 77px;
+    margin-top: 173px;
+}
+
+.flex .about_us{
     padding: 0;
+    width: 41%;
     
 }
 
@@ -87,31 +107,191 @@ p{
     font-weight: bold;
     font-family: fliped;
     margin-bottom: 55px;
+    margin-top: 100px;
 }
 
 .flex .subtitle{
     margin: 0;
     padding: 0;
     font-size: 44px;
+    line-height: 61px;
 }
 
 .flex .text{
     margin: 10px 0 0;
     padding: 0;
-    font-size: 16px;
+    font-size: 17px;
+    line-height: 26px;
 }
 
-.left .title{
-    margin: 0;
-    padding: 0;
-    font-weight: bold;
-    font-family: fliped;
-    text-align: center;
-}
 
-.left .image_container{
+
+.menu .container{
     display: flex;
-    gap: 10px;
-    width: 300px;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+    width: 30%;
     height: 200px;
+    gap: 50%;
+    
+    
+}
+
+.menu .container .name{
+    color:#d30202;
+    font-size: 38px;
+}
+
+.menu .container.image{
+    width: 30%;
+    height: 200px;
+    
+}
+
+.menu h2{
+    width: 15%;
+    height: 78px;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 48px;
+}
+
+
+.gallery div:nth-child(1){
+    width: 245px;
+    height: 78px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 97px;
+    margin-bottom: 27px;
+}
+
+.gallery .image_container{
+    display: flex;
+    width: 20%;
+    height: 300px;
+}
+
+.event div:nth-child(1){
+    width: 173px;
+    height: 78px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 65px;
+    margin-bottom: 39px;
+}
+
+.event .rectangle{
+    width: 1000px;
+    height: 200px;
+    background-color: #ffffff;
+    border: solid 4px #4f260b;
+    display: block;
+    margin: 0 auto;
+    font-size: 23px;
+    line-height: 45px;
+    
+}
+
+.spaced-text{
+    padding: 0 56px;
+}
+
+.underline-text{
+    text-decoration: underline;
+}
+.rectangle p:nth-child(1){
+    margin-top: 41px;
+    margin-bottom: 21px;
+}
+.rectangle p:nth-child(2){
+    margin-bottom: 24px;
+}
+.rectangle p:nth-child(3){
+    margin-bottom: 42px;
+}
+
+.rectangle p{
+    margin-left: 154px;
+
+}
+
+
+
+.access div:nth-child(1){
+    width: 214px;
+    height: 78px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 70px;
+    margin-bottom: 46px;
+}
+
+.access iframe{
+    width: 100%;
+    height: 471px;
+   
+}
+
+
+.last{
+    background-color: #ffffff;
+    margin-top: 72px;
+    margin-bottom: 273px;
+    display: flex;
+}
+
+.last div:nth-child(1){
+    width: 227px;
+    height: 50px;
+    margin-left: 460px;
+    margin-right: 70px;
+   
+}
+
+.box{
+    width:100% ;
+    height: 405px;
+}
+
+.last p:nth-child(1){
+    font-size:20px ;
+    line-height: 39px;
+}
+
+.last p:nth-child(2){
+    font-size:16px ;
+    display: block;
+    margin: 0 auto;
+    margin-bottom:84px ;
+    margin-bottom: 81px;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+.pagetop {
+    height: 125px;
+    width: 125px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    background-color: #d30202;
+    
+    
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.pagetop__arrow {
+    height: 10px;
+    width: 10px;
+    border-top: 3px solid #000;
+    border-right: 3px solid #000;
+    transform: translateY(20%) rotate(-45deg);
 }
