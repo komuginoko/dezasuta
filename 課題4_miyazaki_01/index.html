@@ -6,11 +6,15 @@
     <title>Design cafe</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
  <header>
     <div class="header_slider">
-        <img src="./images/pc_first-100.jpg" alt="店内の様子">
+        <picture>
+            <source srcset="./images/sp_main_vs@2x-100.jpg" media="(max-width:767px)">
+            <img src="./images/pc_first-100.jpg" alt="店内の様子">
+        </picture>
     </div>
 
     <div class="header_wrap">
@@ -18,6 +22,20 @@
             <img src="./images/design_cafe_logo_header@2x.png" alt="DESIGN CAFE">
         </h1>
         <nav class="pc_nav">
+            <ul>
+                <li><a href="#aboutus">ABOUT US</a></li>
+                <li><a href="#menu">MENU</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="#event">EVENT</a></li>
+                <li><a href="#access">ACCESS</a></li>
+            </ul>
+        </nav>
+
+        <div class="sp_btn">
+            <span></span>
+        </div>
+
+        <nav class="sp_nav">
             <ul>
                 <li>ABOUT US</li>
                 <li>MENU</li>
@@ -41,14 +59,14 @@
     </div>
 
     <section class="flex">
-        <h2>
+        <div class="picture">
             <img src="./images/pc_about-100.jpg" alt="tea">
-        </h2>
+        </div>
 
         <div class="about_us">
-            <p class="title">
+            <h2 class="title" id="aboutus">
                 <img src="./images/about_us@2x.png" alt="ABOUT US">
-            </p>
+            </h2>
             <p class="subtitle">私たちが提供する<br>
                 こだわりのコーヒー</p>
             <p class="text">サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。サービスを提供する上での想いや心がけていることなど、メッセージを文章で紹介します。</p>
@@ -60,7 +78,7 @@
     </section>
 
     <section class="menu">
-        <h2>
+        <h2 id="menu">
             <img src="./images/menu@2x.png" alt="menu">
         </h2>
         
@@ -68,8 +86,8 @@
             <div>
                 <img src="./images/pc_menu_drink-100.jpg" alt="drink">
                 <p class="name">Drink</p>
-                <p class="text">ドリンクメニューの概要を100文字程度で<br>
-                    紹介します。素材やこだわりなどをアピー<br>
+                <p class="text">ドリンクメニューの概要を100文字程度で
+                    紹介します。素材やこだわりなどをアピー
                     ルしていきます。</p>
 
             </div>
@@ -77,8 +95,8 @@
             <div>
                 <img src="./images/pc_menu_food-100.jpg" alt="pasta">
                 <p class="name">Food</p>
-                <p class="text">フードメニューの概要を100文字程度で紹<br>
-                    介します。素材やこだわりなどをアピールし<br>
+                <p class="text">フードメニューの概要を100文字程度で紹
+                    介します。素材やこだわりなどをアピールし
                     ていきます。</p>
 
             </div>
@@ -86,8 +104,8 @@
             <div>
                 <img src="./images/pc_menu_sweets-100.jpg" alt="cake">
                 <p class="name">Sweets</p>
-                <p class="text">スイーツメニューの概要を100文字程度で<br>
-                    紹介します。素材やこだわりなどをアピー<br>
+                <p class="text">スイーツメニューの概要を100文字程度で
+                    紹介します。素材やこだわりなどをアピー
                     ルしていきます。</p>
 
             </div>
@@ -96,9 +114,9 @@
 
 
     <section class="gallery">
-        <div>
+        <h2 id="gallery">
             <img src="./images/gallery@2x.png" alt="GALLERY">
-        </div>
+        </h2>
 
         <div class="image_container">
             <img src="./images/pc_gallary_05-100.jpg" alt="画像1">
@@ -114,15 +132,18 @@
     </section>
 
     <section class="event">
-        <div>
+        <h2 id="event">
             <img src="./images/event@2x.png" alt="EVENT">
-        </div>
+        </h2>
 
         <div class="rectangle">
+            <div class="rectangle">
 
-            <p>2020.06.23<span class="spaced-text"></span> <span class="underline-text">7月はイベント出店のため0/0お休みします</span>  </p>
-            <p>2020.03.15<span class="spaced-text"></span> <span class="underline-text">春の新商品新発売。話題のあのブランドとコラボ</span></p>
-            <p>2020.02.06<span class="spaced-text"></span> <span class="underline-text">コーヒーの日で30％OFFイベントを開催［3日間限定］</span></p>
+             <p>2020.06.23<span class="underline-text">7月はイベント出店のため0/0お休みします</span>  </p>
+             <p>2020.03.15<span class="underline-text">春の新商品新発売。話題のあのブランドとコラボ</span></p>
+             <p>2020.02.06<span class="underline-text">コーヒーの日で30%OFFイベントを開催［3日間限定］</span></p>
+            </div>
+
         </div>
         
 
@@ -130,40 +151,53 @@
 
 
     <section class="access">
-        <div>
+        <h2 id="access">
             <img src="./images/access@2x.png" alt="ACCESS">
-        </div>
+        </h2>
 
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3267.9952564191467!2d135.76362057395198!3d35.00682386672912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6001096ea22ae12b%3A0x79b842564b9809a4!2sUFO!5e0!3m2!1sja!2sjp!4v1761014735933!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
     </section>
 
 
-    <section class="last">
-        <div class="box">
-            <img src="./images/design_cafe_logo_footer@2x.png" alt="DESIGN CAFE">
+    <footer class="last">
+        <div>
+            <div class="box">
+                <img src="./images/design_cafe_logo_footer@2x.png" alt="DESIGN CAFE">
+            </div>
+            
+            <div class="box">
+                <p>OPEN 18:00 / CLOSE 24:00<br>
+                    〒150-0022<br>
+                    東京都渋谷区東京南123デザインビルB1<br>
+                    MAIL：info@designcafe.tokyo
+                </p>
+                
+                
+                <p>© 2021 DESIGN CAFE</p>
+                
+                
+            </div>
+            
         </div>
 
-        <div class="box">
-            <p>OPEN 18:00 / CLOSE 24:00<br>
-               〒150-0022<br>
-               東京都渋谷区東京南123デザインビルB1<br>
-               MAIL：info@designcafe.tokyo
-            </p>
-
-
-            <p>© 2021 DESIGN CAFE</p>
-
-
-        </div>
-
-
-    </section>
+    </footer>
    
 
-    <a class="pagetop" href="#"><div class="pagetop__arrow">
+    <a class="pagetop" href="#top">
         <img src="./images/to_top@2x.png" alt="">
-    </div></a>
+    </a>
+
+
+
+    <script>
+     $(function() {
+       $('.sp_btn').on('click',function(){
+        $('.sp_btn').toggleClass('open');
+        $('.sp_nav').fadeToggle();
+       })     
+    })   
+    </script>
 
 </body>
 </html>
