@@ -71,6 +71,10 @@ header{
     letter-spacing: 0.1em;
 }
 
+.br-sp{
+    display: none;
+}
+
 .flex{
     display: flex;
     max-width: 1000px;
@@ -177,8 +181,7 @@ header{
 }
 
 .menu h2{
-    width: 15%;
-    height: 78px;
+    width: 150px;
     display: flex;
     margin: 0 auto;
     margin-bottom: 48px;
@@ -332,6 +335,15 @@ html {
 
 
 @media screen and (max-width: 1100px){
+    .lead p:nth-child(2){
+        font-size: 72px;
+    }
+    .lead p:nth-child(3){
+        font-size: 16px;
+    }
+    .about_us .subtitle{
+        font-size: 34px;
+    }
 
     
 }
@@ -341,7 +353,7 @@ html {
         height: 100px;
         width: 100px;
         right: 10px;
-        bottom: 200px;
+        bottom: 30px;
     }
 
 
@@ -363,17 +375,36 @@ html {
         margin-bottom: 53px;
     }
 
+    .lead p:nth-child(3) .br-sp{
+        display: block;
+    }
+
     .flex{
-        flex-direction: row;
+        flex-direction: column;
         padding: 32px;
         column-gap: 16px;
         display: flex;
     }
 
+    .flex .picture {
+        width:100%;
+        order: 2;
+    }
+    .flex .picture img{
+        border-radius: 0;
+    }
+
+
     .flex .about_us{
         display: block;
         order: 1;
         flex: 1;
+        display: contents;
+        align-items: center;
+    }
+
+    .flex .title{
+        margin-bottom: 12px;
     }
 
     .flex .subtitle{
@@ -384,9 +415,46 @@ html {
         order: 4;
     }
 
-    .flex .picture img{
-        order: 2;
+    .menu .container{
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 0 38px;
+        box-sizing: border-box;
     }
+
+    .gallery .image_container img{
+        display: none;
+    }
+    .gallery .image_container img:nth-child(3){
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .event .rectangle{
+        font-size: 16px;
+        padding: 20px;
+        width: 335px;
+        height: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* .last{
+        flex-direction: column;
+        display: contents;
+    }
+    .last .box1{
+        order: 1;
+    }
+    .last .box2{
+        order: 2;
+    } */
+
+
 
 }
 
