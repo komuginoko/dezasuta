@@ -303,14 +303,8 @@ header{
 }
 
 .last .box2 p{
-    line-height: 1.95;
-}
-
-
-
-.last p:nth-child(3){
     font-size:20px ;
-    line-height: 39px;
+    line-height: 1.95;
 }
 
 .last p:nth-child(4){
@@ -336,7 +330,7 @@ html {
 
 @media screen and (max-width: 1100px){
     .lead p:nth-child(2){
-        font-size: 72px;
+        font-size: 70px;
     }
     .lead p:nth-child(3){
         font-size: 16px;
@@ -356,10 +350,13 @@ html {
         bottom: 30px;
     }
 
+    .lead{
+        margin-top: 41px;
+    }
+
 
     .lead p:nth-child(1){
         font-size: 17px;
-        margin-top: 41px;
         margin-bottom: 22px;
     }
 
@@ -396,19 +393,21 @@ html {
 
 
     .flex .about_us{
-        display: block;
-        order: 1;
-        flex: 1;
         display: contents;
-        align-items: center;
+        
     }
 
     .flex .title{
-        margin-bottom: 12px;
+        margin-bottom: 18px;
+        margin: 57px auto 50px;
+        margin-top: 7px;
+
     }
 
     .flex .subtitle{
         order: 3;
+        margin-top: 35px;
+        margin-bottom: 20px;
     }
 
     .flex .text{
@@ -419,10 +418,22 @@ html {
         flex-direction: column;
         display: flex;
         align-items: center;
-        width: 100%;
         padding: 0 38px;
         box-sizing: border-box;
     }
+
+    .container div{
+        width: 100%;
+    }
+    .container div img{
+        width: 100%;
+    }
+    .container div p:nth-child(1){
+        margin-bottom: 15px;
+    }
+    .container div p:nth-child(2){
+        margin-bottom: 54px;
+    }    
 
     .gallery .image_container img{
         display: none;
@@ -436,23 +447,26 @@ html {
     .event .rectangle{
         font-size: 16px;
         padding: 20px;
-        width: 335px;
         height: 200px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        word-wrap: "off";
     }
 
-    /* .last{
+    .last div{
         flex-direction: column;
-        display: contents;
+        gap: 30px;
+
     }
     .last .box1{
         order: 1;
     }
-    .last .box2{
+    .last .box2 p{
         order: 2;
-    } */
+        font-size: 18px;
+        line-height: 1.72;
+    }
 
 
 
