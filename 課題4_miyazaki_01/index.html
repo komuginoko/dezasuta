@@ -97,7 +97,10 @@
         
         <div class="container">
             <div>
-                <img src="./images/pc_menu_drink-100.jpg" alt="drink">
+                <picture>
+                 <source srcset="./images/drink_sp@2x-100.jpg" media="(max-width:767px)">
+                 <img src="./images/pc_menu_drink-100.jpg" alt="drink">
+               </picture> 
                 <p class="name">Drink</p>
                 <p class="text">ドリンクメニューの概要を100文字程度で
                     紹介します。素材やこだわりなどをアピー
@@ -106,7 +109,10 @@
             </div>
             
             <div>
-                <img src="./images/pc_menu_food-100.jpg" alt="pasta">
+                <picture>
+                 <source srcset="./images/food_sp@2x-100.jpg" media="(max-width:767px)">
+                 <img src="./images/pc_menu_food-100.jpg" alt="pasta">
+                </picture>
                 <p class="name">Food</p>
                 <p class="text">フードメニューの概要を100文字程度で紹
                     介します。素材やこだわりなどをアピールし
@@ -115,7 +121,10 @@
             </div>
 
             <div>
-                <img src="./images/pc_menu_sweets-100.jpg" alt="cake">
+                <picture>
+                 <source srcset="./images/cake_sp@2x-100.jpg" media="(max-width:767px)">
+                 <img src="./images/pc_menu_sweets-100.jpg" alt="cake">
+                </picture>
                 <p class="name">Sweets</p>
                 <p class="text">スイーツメニューの概要を100文字程度で
                     紹介します。素材やこだわりなどをアピールしていきます。</p>
@@ -215,7 +224,31 @@
          dots:true,
          arrows:false,
        });
+
+        $('.gallery').slick({
+        dots:false,
+        infinite:true,
+        speed:300,
+        slidersToSclloll:1,
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots:false
+                }
+            }
+        ]
+
+    });
+
+
+
     })   
+
+   
     </script>
 
 </body>

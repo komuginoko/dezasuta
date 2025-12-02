@@ -378,9 +378,9 @@ html {
 
     .flex{
         flex-direction: column;
-        padding: 32px;
         column-gap: 16px;
         display: flex;
+        padding: 0;
     }
 
     .flex .picture {
@@ -408,19 +408,22 @@ html {
         order: 3;
         margin-top: 35px;
         margin-bottom: 20px;
+        padding: 0 20px;
     }
 
     .flex .text{
         order: 4;
+        padding: 0 20px;
     }
 
     .menu .container{
         flex-direction: column;
-        display: flex;
         align-items: center;
         padding: 0 38px;
         box-sizing: border-box;
+        gap: 50px;
     }
+    
 
     .container div{
         width: 100%;
@@ -448,10 +451,23 @@ html {
         font-size: 16px;
         padding: 20px;
         height: 200px;
+    }
+
+    .rectangle .box p{
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        word-wrap: "off";
+    }
+    .event .rectangle .box{
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .access iframe{
+        height: 191px;
+    }
+    .access img{
+        margin-bottom: 44px;
     }
 
     .last div{
@@ -459,11 +475,7 @@ html {
         gap: 30px;
 
     }
-    .last .box1{
-        order: 1;
-    }
     .last .box2 p{
-        order: 2;
         font-size: 18px;
         line-height: 1.72;
     }
